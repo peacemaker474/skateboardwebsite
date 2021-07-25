@@ -7,6 +7,9 @@ import NotiImg from '../assets/notification.png';
 const MainHeader = styled.header`
     width: 1440px;
     height: 108px;
+    position: fixed;
+    top:0;
+    left: 0;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -78,6 +81,7 @@ const RedP = styled.div`
     top: 2%;
     right: -3%;
 `;
+
 
 const Header = () => {
     return (

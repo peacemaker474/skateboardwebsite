@@ -4,7 +4,7 @@ import Router from './Router';
 
 const App = () => {
   return (
-    <div className="App">
+    <div style={{display:"flex"}}className="App">
       <GlobalStyle />
       <Router />
     </div>

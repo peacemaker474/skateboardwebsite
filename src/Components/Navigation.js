@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from 'react-router-dom';
 import HomeImg from '../assets/Home.png';
+import nightmode from '../assets/night.png';
 
 const NavBar = styled.nav`
     width: 134px;
     height: 932px;
-    margin-left: 32px;
+    margin: 108px 0 0 32px;
 `;
 const Title = styled.h4`
     color: #808191;
@@ -15,15 +16,15 @@ const Title = styled.h4`
 `;
 const Menu = styled.ul`
     width: 100%;
-    height: 297px;
-    margin-bottom: 42px;
+    height: 323px;
+    margin-bottom: 52px;
     border-bottom: 1px solid #808191;
 `;
 
 const List = styled.li`
     display: flex;
     align-items: center;
-    margin-top: 24px;
+    margin-top: 27px;
     color: blue;
 `;
 
@@ -45,9 +46,20 @@ const NavLink = styled(Link)`
     font-size: 14px;
 `;
 
-const Category = styled.ul``;
+const Category = styled.ul`
+    width: 100%;
+    height: 259px;
+    margin-bottom: 52px;
+    border-bottom: 1px solid #808191;
+`;
 
-const NightMode = styled.div``;
+const NightMode = styled.div`
+    width: 156px;
+    height: 31px;
+    background-image: url(${nightmode});
+    background-size: cover;
+    margin-top: 48px;
+`;
 
 const Navigation = withRouter(({location: {pathname}}) => {
     const [menu, setMenu] = useState(["Discover", "Trending", "Streaming", "Playlist", "Bookmark"]);
@@ -76,9 +88,7 @@ const Navigation = withRouter(({location: {pathname}}) => {
                 </List>
                 )}
             </Category>
-            <NightMode>
-
-            </NightMode>
+            <NightMode />
         </NavBar>
     )
 })

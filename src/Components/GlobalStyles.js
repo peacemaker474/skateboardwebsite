@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
     body{
         background-color: #1f1d2b;
         color: white;
-        overflow: hidden;
     }
 `;
 
